@@ -1,9 +1,11 @@
 import Navbar from './components/Navbar.js';
 import GlobalStyle from './globalStyle';
 import styled from 'styled-components';
+import Main from './components/Main.js';
+import Footer from './components/Footer.js';
 
 const Wrapper = styled.div`
-	width: 90%;
+	/* width: 90%; */
 	max-width: 87em;
 	margin: 0 auto;
 `;
@@ -13,6 +15,8 @@ const App = () => {
 		<Wrapper>
 			<GlobalStyle />
 			<Navbar />
+			<Main />
+			<Footer />
 		</Wrapper>
 	);
 };
