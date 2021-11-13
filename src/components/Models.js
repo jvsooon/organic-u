@@ -13,18 +13,22 @@ const Models = () => {
 		<Section>
 			<SectionTitle>Products For Every Skintone</SectionTitle>
 			<ModelsWrapper>
-				{imgNames.map((imgName, index) => (
-					<ModelWrapper>
-						<ModelImg
-							key={index}
-							src={
-								require(`../assets/models/${imgName}.png`)
-									.default
-							}
-						/>
-						<Button>{splitName(imgName)} tone</Button>
-					</ModelWrapper>
-				))}
+				{imgNames.map((imgName, index) => {
+					const skinTone = splitName(imgName);
+					return (
+						<ModelWrapper key={index}>
+							<ModelImg
+								key={index}
+								src={
+									require(`../assets/models/${imgName}.png`)
+										.default
+								}
+								alt={`${skinTone} model`}
+							/>
+							<Button>{skinTone} tone</Button>
+						</ModelWrapper>
+					);
+				})}
 			</ModelsWrapper>
 		</Section>
 	);
@@ -36,6 +40,7 @@ const Section = styled.section`
 
 const SectionTitle = styled.h2`
 	text-align: center;
+	text-decoration: underline;
 	margin-bottom: 2em;
 `;
 
@@ -57,6 +62,7 @@ const ModelImg = styled.img`
 
 const Button = styled.button`
 	font-size: 0.9em;
+	font-weight: bold;
 	border: 1px solid black;
 	padding: 1em;
 	border-radius: 0.6em;

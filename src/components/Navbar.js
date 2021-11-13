@@ -12,8 +12,8 @@ const Navbar = () => {
 
 	return (
 		<Header>
+			<LeavesDecoration alpha={1} />
 			<Nav>
-				{/* <LeavesDecoration alpha={1} /> */}
 				<LogoWrapper onClick={toggleDrawer}>
 					<Logo src={LogoImage} alt='Organic u Products logo' />
 				</LogoWrapper>
@@ -54,6 +54,10 @@ const Nav = styled.nav``;
 const LogoWrapper = styled.div`
 	padding: 1em 0;
 	z-index: 1;
+
+	@media (min-width: 600px) {
+		display: none;
+	}
 `;
 
 const Logo = styled.img`
@@ -62,7 +66,7 @@ const Logo = styled.img`
 `;
 
 const NavItemLogo = styled.img`
-	width: 3em;
+	width: max(3em, 4vw);
 `;
 
 const NavMenuWrapper = styled.div`
@@ -74,6 +78,13 @@ const NavMenuWrapper = styled.div`
 	transition: all 0.3s ease-in-out;
 	background: ${colors.light_grey};
 	z-index: 1;
+
+	@media (min-width: 600px) {
+		position: unset;
+		background: none;
+		height: unset;
+		padding: 2em 0;
+	}
 `;
 
 const NavMenu = styled.ul`
@@ -84,12 +95,20 @@ const NavMenu = styled.ul`
 	align-items: center;
 	justify-content: space-evenly;
 	height: 100%;
+
+	@media (min-width: 600px) {
+		flex-direction: row;
+	}
 `;
 
 const NavMenuItem = styled.li``;
 
 const NavMenuItemLogo = styled.li`
 	display: none;
+
+	@media (min-width: 600px) {
+		display: block;
+	}
 `;
 
 const NavItemLink = styled.a`
@@ -103,6 +122,10 @@ const MenuClose = styled.div`
 	text-align: center;
 	transform: translateY(-3em);
 	cursor: pointer;
+
+	@media (min-width: 600px) {
+		display: none;
+	}
 `;
 
 export default Navbar;

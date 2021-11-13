@@ -20,8 +20,6 @@ const Main = () => {
 	);
 };
 
-const MainWrapper = styled.main`
-	position: relative;
-`;
+const MainWrapper = styled.main``;
 
 export default Main;

@@ -5,7 +5,6 @@ import Main from './components/Main.js';
 import Footer from './components/Footer.js';
 
 const Wrapper = styled.div`
-	/* width: 90%; */
 	max-width: 87em;
 	margin: 0 auto;
 `;

@@ -20,7 +20,7 @@ const Footer = () => {
 		<FooterWrapper>
 			<InnerWrapper>
 				<FooterColumn>
-					<FooterLogo src={LogoImage} alt='Organic u Products logo' />
+					<FooterLogo src={LogoImage} alt='Organic u Products logo' alt='Organic u Products logo'/>
 				</FooterColumn>
 				<FooterColumn>
 					<FooterTitle>help</FooterTitle>
@@ -65,19 +65,17 @@ const FooterWrapper = styled.footer`
 	width: 99.8vw;
 	margin-left: -50vw;
 	padding: 2em 5%;
-	/* left: 0; */
-	/* right: 50%; */
-	/* margin: 0 -50vw; */
 `;
 
 const InnerWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	align-items: center;
-	/* justify-content: space-around; */
 	max-width: 87em;
 	margin: 0 auto;
+	@media (min-width: 600px) {
+		justify-content: space-around;
+	}
 `;
 
 const FooterColumn = styled.div`
@@ -107,10 +105,18 @@ const InputWrapper = styled.div`
 `;
 
 const Input = styled.input`
+	width: 70%;
 	border: none;
-	padding: 1em 0.3em;
+	padding: 1em 0;
+	padding-left: 0.6em;
 	border-radius: 0.6em;
-	filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.1));
+	transition: all 0.3s ease-in-out;
+
+	&:hover,
+	&:focus {
+		outline: none;
+		filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.1));
+	}
 `;
 
 const SubscribeButton = styled.button`
@@ -118,6 +124,7 @@ const SubscribeButton = styled.button`
 	background: black;
 	color: white;
 	border-radius: 0.6em;
+	font-weight: bold;
 	transition: all 0.3s ease-in-out;
 
 	&:hover {

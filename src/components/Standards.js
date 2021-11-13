@@ -20,6 +20,7 @@ const Standards = () => {
 							require(`../assets/standards/${imgName}.png`)
 								.default
 						}
+                        alt={`${imgName} logo`}
 					/>
 				))}
 			</StandardsWrapper>

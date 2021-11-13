@@ -20,7 +20,11 @@ const Section = styled.section`
 	margin: 2em 0;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+	@media (min-width: 600px) {
+		margin: 0 max(10%, 14vw);
+	}
+`;
 
 const Subtitle = styled.h2``;
 

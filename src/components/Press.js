@@ -12,7 +12,7 @@ const Press = () => {
 					<PressLogo
 						key={index}
 						src={require(`../assets/press/${imgName}.png`).default}
-						alt=''
+						alt={`${imgName} logo`}
 					/>
 				))}
 			</PressWrapper>
@@ -20,7 +20,7 @@ const Press = () => {
 	);
 };
 
-const Section = styled.div`
+const Section = styled.section`
 	padding: 2em 0;
 `;
 
@@ -33,16 +33,15 @@ const SectionTitle = styled.h2`
 const PressWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
 	align-items: center;
+	justify-content: space-around;
 	gap: 0 2em;
 `;
 
 const PressLogo = styled.img`
 	height: 100%;
 	margin: 2em 0;
-	/* width: 7em; */
-	width: max(7em, 10vw);
+	width: max(7em, 9vw);
 `;
 
 export default Press;

@@ -12,7 +12,7 @@ const Products = () => {
 	return (
 		<Section>
 			<Title>Latest Products</Title>
-			{/* <LeavesDecoration alpha={0.4} /> */}
+			<LeavesDecoration alpha={0.4} adjust={true} />
 			<ProductsWrapper>
 				{data.map((info, index) => {
 					const { imgName, description, price } = info;
@@ -34,7 +34,6 @@ const Products = () => {
 					);
 				})}
 			</ProductsWrapper>
-			{/* <LeavesDecoration alpha={.4}/> */}
 		</Section>
 	);
 };
@@ -46,7 +45,7 @@ const Section = styled.section`
 const Title = styled.h2`
 	text-align: center;
 	text-decoration: underline;
-	margin-bottom: 2em;
+	margin: 2em 0;
 `;
 
 const ProductsWrapper = styled.div`
@@ -73,6 +72,7 @@ const ProductPrice = styled.span`
 
 const ProductButton = styled.button`
 	font-size: 0.9em;
+	font-weight: bold;
 	display: block;
 	border: none;
 	color: white;

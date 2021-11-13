@@ -25,13 +25,11 @@ const Companies = () => {
 
 const Section = styled.section`
 	background: ${colors.light_grey};
-	padding: 0 5%;
+	padding: 1em 5%;
 	position: relative;
 	left: 50%;
 	width: 99.8vw;
 	margin-left: -50vw;
-	/* right: 50%; */
-	/* margin: 2em -50vw; */
 `;
 
 const Wrapper = styled.div`
@@ -47,7 +45,7 @@ const Wrapper = styled.div`
 const CompanyLogo = styled.img`
 	height: 100%;
 	margin: 2em 0;
-	width: 8em;
+	width: max(7em, 9vw);
 `;
 
 export default Companies;

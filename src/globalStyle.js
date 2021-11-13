@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 16px;
         font-family: 'Montserrat', Sans-Serif;
         line-height: 1.6;
+        overflow-x: hidden;    
     }
 
     button {
@@ -28,11 +29,13 @@ const GlobalStyle = createGlobalStyle`
     
     h1 {
         font-size: clamp(2rem, 1.6175rem + 1.9127vw, 3.052rem);
-        /* font-size: clamp(2.488rem, 2.3470rem + 0.7050vw, 3.052rem);     */
-        /* font-size: clamp(2.488rem, 2.0577rem + 2.1512vw, 4.209rem); */
     }
 
-    header, section, footer {
+    h2 {
+        font-size: clamp(1.5rem, 1.2212rem + 1.3941vw, 2.441rem);
+    }
+
+    header, main, footer {
         padding: 0 5%;
     }
 `;
